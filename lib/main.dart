@@ -7,12 +7,22 @@ void main() {
 class MyApp extends StatelessWidget {
   const MyApp({super.key});
 
+  @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      home: Container(
-        color: const Color.fromARGB(255, 13, 77, 15),
-        child: Text("Hello World! <3"),
-        alignment: Alignment.topCenter,
+      home: HomePage(),
+    );
+  }
+}
+
+class HomePage extends StatelessWidget {
+  const HomePage({super.key});
+
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      appBar: AppBar(
+        title: Text("Hello World <3 !"),
       ),
     );
   }
